@@ -25,7 +25,6 @@ namespace Lab11_Intro_To_MVC.Models
             string[] getPeopleData = File.ReadAllLines("personOfTheYear.csv");
 
             return getPeopleData
-                .Skip(1)
                 .Select(eachData => eachData.Split(","))
                 .Select(eachCol => new PersonOfTheYear()
                 {
