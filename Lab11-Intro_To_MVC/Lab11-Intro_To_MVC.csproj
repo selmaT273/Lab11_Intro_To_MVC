@@ -12,4 +12,7 @@
     <Folder Include="Views\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Properties\Lab11-IntroToMVC.PublishSettings" />
+  </ItemGroup>
 </Project>
