@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Lab11_Intro_To_MVC.Models
 {
@@ -25,6 +24,7 @@ namespace Lab11_Intro_To_MVC.Models
             string[] getPeopleData = File.ReadAllLines("personOfTheYear.csv");
 
             return getPeopleData
+                .Skip(1)
                 .Select(eachData => eachData.Split(","))
                 .Select(eachCol => new PersonOfTheYear()
                 {
@@ -32,8 +32,8 @@ namespace Lab11_Intro_To_MVC.Models
                     Honor = eachCol[1],
                     Name = eachCol[2],
                     Country = eachCol[3],
-                    BirthYear = int.Parse(eachCol[4]),
-                    DeathYear = int.Parse(eachCol[5]),
+                    BirthYear = eachCol[4] == "" ? 0 : int.Parse(eachCol[4]),
+                    DeathYear = eachCol[5] == "" ? 0 : int.Parse(eachCol[5]),
                     Title = eachCol[6],
                     Category = eachCol[7],
                     Context = eachCol[8]
