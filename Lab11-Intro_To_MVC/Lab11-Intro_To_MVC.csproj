@@ -5,4 +5,14 @@
     <RootNamespace>Lab11_Intro_To_MVC</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Properties\Lab11-IntroToMVC.PublishSettings" />
+  </ItemGroup>
 </Project>

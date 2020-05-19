@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Results!</h1>
+    @foreach (Lab11_Intro_To_MVC.Models.PersonOfTheYear person in Model)
+    {
+        <ul>
+            <li> @person.Name </li>
+            <li> @person.Country </li>
+        </ul>
+    }
+</body>
+</html>
