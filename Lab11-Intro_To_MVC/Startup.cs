@@ -34,11 +34,7 @@ namespace Lab11_Intro_To_MVC
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
-                endpoints.MapGet("/", async context =>
-                {
-                    string message = (string)context.Request.Query["message"] ?? "Hello";
-                    await context.Response.WriteAsync($"{message} World!");
-                });
+             
             });
         }
     }

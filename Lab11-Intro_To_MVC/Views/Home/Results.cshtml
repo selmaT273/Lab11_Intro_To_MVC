@@ -14,5 +14,12 @@
 </head>
 <body>
     <h1>Results!</h1>
+    @foreach (Lab11_Intro_To_MVC.Models.PersonOfTheYear person in Model)
+    {
+        <ul>
+            <li> @person.Name </li>
+            <li> @person.Country </li>
+        </ul>
+    }
 </body>
 </html>
